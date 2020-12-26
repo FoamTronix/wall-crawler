@@ -6,8 +6,9 @@ import serial
 import time
 import RPi.GPIO as GPIO
 
-# ser = serial.Serial('/dev/ttyACM0', 9600)
-ser = serial.Serial('/dev/ttyAMA0', 9600)
+ser = serial.Serial('/dev/ttyACM0', 9600)
+ser.flushInput()
+# ser = serial.Serial('/dev/ttyAMA0', 9600)
 # ser = serial.Serial('/dev/ttyUSB0', 9600)
 
 GPIO.setmode(GPIO.BOARD)
